@@ -1,0 +1,50 @@
+import json
+
+labeled_examples= [
+    {"text": "All ok but vry small size mobile", "label": "Neutral"},
+    {"text": "Quite good", "label": "Positive"},
+    {"text": "Redmi has always have been the the king of budget segment... Verdict: The Base model is actually the Value for money deal. 3/32 GB.", "label": "Positive"},
+    {"text": "I have been using the Redmi 6 pro for 3 weeks now. This is totally tested.", "label": "Positive"},
+    {"text": "worst product from MI. I am a hardcore fan of MI. But this one really disappointing.", "label": "Negative"},
+    {"text": "Over prised by at least around Rs.1000/- Low light photos are bad. Only one SIM support VOLTE.", "label": "Negative"},
+    {"text": "Good things are best sound, good display, smooth touch, excellent battery life management...", "label": "Positive"},
+    {"text": "Great product to purchase finally and its value for money.I got this phone for 10,500 and thanks to Xiaomi.", "label": "Positive"},
+    {"text": "Front camera is poor rest things are good", "label": "Neutral"},
+    {"text": "Wooo", "label": "Positive"},
+    {"text": "Don't worry mi have given value for money as always", "label": "Positive"},
+    {"text": "awesome product at this range", "label": "Positive"},
+    {"text": "Very nice looks , smooth operation , camera could have been better", "label": "Neutral"},
+    {"text": "Like every things but fullscreen video playing option is not available in default player...", "label": "Neutral"},
+    {"text": "Please don't buy these product.. I have 3-mobile of MI but i did not face these type of issue...", "label": "Negative"},
+    {"text": "Thanks alot Amazon,ecom & seller.perfect product no compromise in quality...", "label": "Positive"},
+    {"text": "No company can provide u these features Pros: AWESOME display, Great video stablisation, Great battery, Great performance, Looks beatifull Cons: Okk front camera( not very bad considering price)", "label": "Neutral"},
+    {"text": "The product is great with quite good features... disappointed with mobile designing of Xiaomi...", "label": "Positive"},
+    {"text": "Camera clarity is not good and average mobile I purchased first time mi mobile but not good compare to expect", "label": "Neutral"},
+    {"text": "Superb job by Xiaomi\n\nHandy phone. Not huge size not slippery...", "label": "Positive"},
+    {"text": "Good phone at such a valuable price. Notch display.\n\nValue for money", "label": "Positive"},
+    {"text": "Good phone", "label": "Positive"},
+    {"text": "Great product, fully met my expectations....", "label": "Positive"},
+    {"text": "Good", "label": "Positive"},
+    {"text": "Do not buy.", "label": "Negative"},
+    {"text": "No dual 4g if you think new mobile you buy realme 1", "label": "Neutral"},
+    {"text": "very good phone of this budget......red colour very beautiful", "label": "Positive"},
+    {"text": "Nice product. Delivery guy also.", "label": "Positive"},
+    {"text": "Bad camera quality and heating problem", "label": "Negative"},
+    {"text": "Good phone in budget. Good camera,battery and performance for normal use. Call sound is very good.", "label": "Positive"},
+    {"text": "Awesome sound quality , battery life is good , gaming is good no lags there ...Very poor camera...", "label": "Positive"},
+    {"text": "Nice mobile, battery backup is good, camera gud, one limitation is front camera- 5 no, slim & light weight mobile", "label": "Positive"},
+    {"text": "All ok but vry small size mobile", "label": "Positive"},  # duplicate kept
+    {"text": "Quite good", "label": "Positive"},  # duplicate kept
+    {"text": "Redmi has always have been the the king of budget segment... Verdict: The Base model is actually the Value for money deal. 3/32 GB.", "label": "Positive"},  # duplicate kept
+    {"text": "I have been using the Redmi 6 pro for 3 weeks now. This is totally tested.", "label": "Positive"},  # duplicate kept
+    {"text": "worst product from MI. I am a hardcore fan of MI. But this one really disappointing.", "label": "Negative"},  # duplicate kept
+    {"text": "Over prised by at least around Rs.1000/- Low light photos are bad. Only one SIM support VOLTE.", "label": "Negative"},  # duplicate kept
+    {"text": "Wooo", "label": "Positive"},  # duplicate kept
+    {"text": "No dual 4g if you think new mobile you buy realme 1", "label": "Neutral"}  # duplicate kept
+]
+
+
+with open("sentiment_training_data.jsonl", "w", encoding="utf-8") as f:
+    for example in labeled_examples:
+        json.dump(example, f)
+        f.write("\n")
